@@ -1,0 +1,13 @@
+repos:
+  - repo: git@github.com:Lucwss/clean-python-api.git
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [ python ]
+        args:
+          [
+            "-rn", # Only display messages
+            "--load-plugins=pylint.extensions.docparams", # Load an extension
+          ]

@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "clean-python-api"
+version = "0.1.0"
+description = ""
+authors = ["Lucas Emanoel <lucws2002@gmail.com>"]
+readme = "README.md"
+packages = [{include = "clean_python_api"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.103.2"
+uvicorn = {extras = ["standard"], version = "^0.23.2"}
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+pytest-asyncio = "^0.21.1"
+pylint = "^3.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
