@@ -6,10 +6,10 @@ from pymongo import collection
 
 class MongoHelper:
     def __init__(self):
-        self.host = ""
-        self.port = 0
-        self.user = ""
-        self.password = ""
+        self.host = "0.0.0.0"
+        self.port = 27045
+        self.user = "user-access"
+        self.password = "user-pass-123"
         self.connection = self._connection()
 
     def _connection(self):
@@ -20,11 +20,16 @@ class MongoHelper:
             password=self.password
         )
 
+    def disconnect(self):
+        self.connection.close()
+
     def database(self):
-        return self.connection.database_name
+        return self.connection.CleanPythonMongo
 
     def get_collection(self, name: str) -> collection:
         return self.database().get_collection(name)
 
-    def map(self, collection: Any) -> Any:
-        pass
+    def mapper(self, collection: dict) -> Any:
+        collection['id'] = str(collection['_id'])
+        collection.pop('_id')
+        return collection
