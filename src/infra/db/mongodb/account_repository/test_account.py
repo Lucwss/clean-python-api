@@ -1,9 +1,10 @@
+import unittest
+from unittest import IsolatedAsyncioTestCase
+
 from src.data.protocols.add_account_repository import AddAccountRepository
 from src.domain.usecases.add_account import AddAccountModel
 from src.infra.db.mongodb.account_repository.account import AccountMongoRepository
 from src.presentation.protocols.interface import BaseInterface
-from unittest import IsolatedAsyncioTestCase
-import unittest
 
 
 class SutTypes(BaseInterface):

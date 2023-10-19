@@ -1,5 +1,6 @@
-from src.data.protocols.encrypter import Encrypter
 from passlib.context import CryptContext
+
+from src.data.protocols.encrypter import Encrypter
 
 
 class BcryptAdapter(Encrypter):

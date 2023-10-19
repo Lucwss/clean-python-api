@@ -1,5 +1,6 @@
-from .http import HttpRequest, HttpResponse
 from abc import ABC, abstractmethod
+
+from .http import HttpRequest, HttpResponse
 
 
 class Controller(ABC):

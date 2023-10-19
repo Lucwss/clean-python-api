@@ -1,5 +1,5 @@
-from unittest import IsolatedAsyncioTestCase
 import unittest
+from unittest import IsolatedAsyncioTestCase
 from unittest.mock import patch, AsyncMock
 
 from src.data.protocols.encrypter import Encrypter

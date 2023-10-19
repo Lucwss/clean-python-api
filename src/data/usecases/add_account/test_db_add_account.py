@@ -1,5 +1,5 @@
-from unittest import IsolatedAsyncioTestCase
 import unittest
+from unittest import IsolatedAsyncioTestCase
 from unittest.mock import AsyncMock, patch
 
 from src.data.protocols.add_account_repository import AddAccountRepository

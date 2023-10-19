@@ -1,6 +1,7 @@
+from abc import ABC, abstractmethod
+
 from src.domain.models.account import AccountModel
 from src.presentation.protocols.interface import BaseInterface
-from abc import ABC, abstractmethod
 
 
 class AddAccountModel(BaseInterface):
