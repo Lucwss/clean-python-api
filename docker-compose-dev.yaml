@@ -10,6 +10,6 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: user-pass-123
       MONGO_INITDB_DATABASE: CleanPythonMongo
     volumes:
-      - "./mongodb:/data/database"
+      - "./mongodata:/data/database"
     ports:
       - "27045:27017"
